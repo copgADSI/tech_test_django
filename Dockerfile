@@ -1,6 +1,11 @@
 # Usa Python 3.10
 FROM python:3.10-slim
 
+# Instalamos pg_isready y sus dependencias
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends postgresql-client \
+    && rm -rf /var/lib/apt/lists/*
+
 # Evita bytecode y habilita salida sin buffer
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1

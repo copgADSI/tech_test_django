@@ -11,5 +11,8 @@ done
 python manage.py migrate --noinput
 python manage.py createsuperuser --noinput || true
 
+# Recolecta todos los estáticos (incluyendo admin)
+python manage.py collectstatic --noinput
+
 # 3) Inicia Gunicorn
 exec "$@"
