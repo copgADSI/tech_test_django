@@ -1,0 +1,12 @@
+
+# Python artefacts
+__pycache__/
+*.py[cod]
+*.log
+.env
+
+# Docker
+db_data/
+
+# IDEs
+.vscode/
